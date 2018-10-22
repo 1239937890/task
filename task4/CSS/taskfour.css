@@ -9,23 +9,21 @@ width: 100%;
 position:absolute;
 color: #FFFFFF;
 left: 15px;
-line-height: 44px;
-font-size: 15px;
+line-height: 64px;
+font-size: 14px;
 }
-.login{
+.loginone{
 color: #FFFFFF;
-font-size: 16px;
-line-height: 44px;
-
+line-height: 64px;
 }
 .registration{
 position:absolute;
 color: #FFFFFF;
 right: 15px;
-line-height: 44px;
+font-size: 15px;
+line-height: 64px;
 }
-.box1{
-
+.boxone{
 height: 50px;
 margin-top: 8px;
 background-color:#FFFFFF;
@@ -35,9 +33,25 @@ position: absolute;
 height: 20px;
 width: 13px; 
 margin: 15px 325px 15px 21px;
-
 }
-.box2{
+.line{
+    position: absolute;
+    background-color: #E1E5E7;
+    width: 1px;
+    height: 26px;
+    margin-top: 12px;
+    margin-left: 58px;
+}
+.number{
+    position: absolute;
+    width: 96px;
+    height: 15px;
+    margin-top: 17px;
+    margin-left: 75px;
+    border: none;
+    outline: medium;
+}
+.boxtwo{
 height: 50px;
 background-color:#FFFFFF;
 margin-top: 7px;
@@ -48,3 +62,23 @@ margin-top: 7px;
     height: 22px;
     margin: 15px 323px 14px 22px;
 }
+.pagetail{
+    margin-top: 35px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color:#5FC0CD; 
+}
+.logintwo{
+    color: #FFFFFF;
+    line-height: 44px;
+    letter-spacing:15px;
+}
+.last{
+    position: absolute;
+    margin-top: 9px;
+    right: 16PX;
+    color: #5FC0CD;
+    text-decoration: underline;
+}
+
