@@ -1,0 +1,50 @@
+body{background-color:#EFF0F4;
+    margin: 0px;
+    }
+.header{background-color:#5FC0CD;
+text-align: center;
+width: 100%;
+}
+.close{
+position:absolute;
+color: #FFFFFF;
+left: 15px;
+line-height: 44px;
+font-size: 15px;
+}
+.login{
+color: #FFFFFF;
+font-size: 16px;
+line-height: 44px;
+
+}
+.registration{
+position:absolute;
+color: #FFFFFF;
+right: 15px;
+line-height: 44px;
+}
+.box1{
+
+height: 50px;
+margin-top: 8px;
+background-color:#FFFFFF;
+}
+.iphone{
+position: absolute;
+height: 20px;
+width: 13px; 
+margin: 15px 325px 15px 21px;
+
+}
+.box2{
+height: 50px;
+background-color:#FFFFFF;
+margin-top: 7px;
+}
+.lock{
+    position: absolute;
+    width: 15px;
+    height: 22px;
+    margin: 15px 323px 14px 22px;
+}
