@@ -1,55 +1,56 @@
-body{background-color:#EFF0F4;
+body{
     margin: 0px;
-    }
-.header{
-position: relative;
-background-color:#5FC0CD;
-text-align: center;
-width: 100%;
-height: 64px;
+    background-color:#EFF0F4;
 }
+.header{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 64px;
+    background-color:#5FC0CD;
+}  
 .close{
     position:absolute;
-    color: #FFFFFF;
     left: 15px;
-    line-height: 64px;
+    color: #FFFFFF;
     font-size: 15px;
-    }
+    line-height: 64px;
+}
 .login{
     color: #FFFFFF;
-    line-height: 64px;
     font-size: 16px;
-    }
+    line-height: 64px;
+}
 .regsiter{
-position:absolute;
-color: #FFFFFF;
-right: 15px;
-font-size: 15px;
-line-height: 64px;
+    position:absolute;
+    right: 15px;
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 64px;
 }
 .box-one{
-position:relative;
-height: 50px;
-margin-top: 8px;
-background-color:#FFFFFF;
+    position:relative;
+    height: 50px;
+    margin-top: 8px;
+    background-color:#FFFFFF;
 }
 .iphone{
-position: absolute;
-height: 20px;
-width: 13px; 
-margin:15px 325px 15px 24px;
+    position: absolute;
+    height: 20px;
+    width: 13px; 
+    margin:15px 325px 15px 24px;
 }
 .line{
     position: absolute;
-    background-color: #E1E5E7;
     width: 1px;
     height: 26px;
     margin-top: 12px;
     margin-left: 58px;
+    background-color: #E1E5E7;
 }
 .number{
     position: absolute;
-    width: 96px;
+    width: 75%;
     height: 15px;
     margin-top: 17px;
     margin-left: 75px;
@@ -57,11 +58,11 @@ margin:15px 325px 15px 24px;
     outline: medium;
 }
 .box-two{
-position: relative;
-height: 50px;
-background-color:#FFFFFF;
-margin-top: 7px;
-}
+    position: relative;
+    height: 50px;
+    margin-top: 7px;
+    background-color:#FFFFFF;
+    }
 .lock{
     position: absolute;
     width: 15px;
@@ -69,17 +70,17 @@ margin-top: 7px;
     margin: 15px 323px 14px 22px;
 }
 .footer{
-    margin-top: 35px;
     width: 100%;
     height: 50px;
-    text-align: center;
-    background-color:#5FC0CD; 
-    color: #FFFFFF;
-    font-size: 16px;
-    letter-spacing: 10px;
+    margin-top: 35px; 
     border: none;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 12px;
     outline: medium;
-}
+    color: #FFFFFF;
+    background-color:#5FC0CD;
+}      
 .last{
     position: absolute;
     margin-top: 9px;
