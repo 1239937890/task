@@ -1,29 +1,34 @@
 body{background-color:#EFF0F4;
     margin: 0px;
     }
-.header{background-color:#5FC0CD;
+.header{
+position: relative;
+background-color:#5FC0CD;
 text-align: center;
 width: 100%;
+height: 64px;
 }
 .close{
-position:absolute;
-color: #FFFFFF;
-left: 15px;
-line-height: 64px;
-font-size: 14px;
-}
-.loginone{
-color: #FFFFFF;
-line-height: 64px;
-}
-.registration{
+    position:absolute;
+    color: #FFFFFF;
+    left: 15px;
+    line-height: 64px;
+    font-size: 15px;
+    }
+.login{
+    color: #FFFFFF;
+    line-height: 64px;
+    font-size: 16px;
+    }
+.regsiter{
 position:absolute;
 color: #FFFFFF;
 right: 15px;
 font-size: 15px;
 line-height: 64px;
 }
-.boxone{
+.box-one{
+position:relative;
 height: 50px;
 margin-top: 8px;
 background-color:#FFFFFF;
@@ -32,7 +37,7 @@ background-color:#FFFFFF;
 position: absolute;
 height: 20px;
 width: 13px; 
-margin: 15px 325px 15px 21px;
+margin:15px 325px 15px 24px;
 }
 .line{
     position: absolute;
@@ -51,7 +56,8 @@ margin: 15px 325px 15px 21px;
     border: none;
     outline: medium;
 }
-.boxtwo{
+.box-two{
+position: relative;
 height: 50px;
 background-color:#FFFFFF;
 margin-top: 7px;
@@ -62,17 +68,17 @@ margin-top: 7px;
     height: 22px;
     margin: 15px 323px 14px 22px;
 }
-.pagetail{
+.footer{
     margin-top: 35px;
     width: 100%;
     height: 50px;
     text-align: center;
     background-color:#5FC0CD; 
-}
-.logintwo{
     color: #FFFFFF;
-    line-height: 44px;
-    letter-spacing:15px;
+    font-size: 16px;
+    letter-spacing: 10px;
+    border: none;
+    outline: medium;
 }
 .last{
     position: absolute;

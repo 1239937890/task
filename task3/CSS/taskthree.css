@@ -1,31 +1,33 @@
-.recorpage{
+body{
+    color:white;
+    background-color:#68CDD5;
+    line-height:30px;
+    }
+.sign{
     margin-top: 10px;
     margin-left: 18px;
     }
-    .title{margin-top: 21px;
+.title{
+    margin-top: 21px;
     text-align: center;
     }
-    .words{
+.words{
     margin-top: 60px;
     margin-left: 8%;
     margin-right: 8%;
     text-align: left;
     }
-    .image{
+ .image{
     margin-top: 89px;
     margin-left: 5%;
     text-align: center;
     float: left;
     }
-    .bjptteng{
+.bjptteng{
     margin-top: 92px;
     margin-right: 5%;
     text-align: center;
     float:right;
     }
-    body{
-    background-color:#68CDD5;
-    color:white;
-    line-height:30px;
-    }
+
     
