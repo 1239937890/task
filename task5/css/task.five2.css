@@ -27,6 +27,7 @@ header{
     transform: rotate(45deg);
 }
 h3{
+    margin: 0;
     color: #FFFFFFFF;
     font-size: .36rem;
 }
@@ -38,8 +39,7 @@ h3{
     background-size: 100% 101%;
 }
 .photo{
-    margin-top: .78rem;
-    margin-left: .3rem;
+    margin: .78rem 0 0 .3rem;
 }
 .data{
     position: absolute;
@@ -68,6 +68,7 @@ h3{
 }
 ul{
     margin: 0;
+    margin-bottom: 50%;
     padding: 0;
 }
 .skill{
@@ -91,8 +92,7 @@ li{
 .star{
     height: .24rem;
     width: .24rem;
-    margin-right: .09rem;
-    margin-left: .26rem;
+    margin-right: 0 .09rem 0 .26rem;
 }
 .live{
     font-size: .32rem;
@@ -111,9 +111,8 @@ li{
     font-size: .32rem;
 }
 .employment{
-    margin-left: .26rem;
+    margin: 0 .26rem 0 .26rem;
     padding-right: .26rem;
-    margin-right: .26rem;
     border-right: .01rem solid #999999;
     font-size: .32rem;
     color: #999999;
@@ -123,27 +122,9 @@ li{
     font-size: .32rem;
     color: #333333;
 }
-.work-time{
-    margin-left: .26rem;
-    margin-right: .26rem;
-    padding-right: .26rem;
-    border-right: .01rem solid #999999;
-    font-size: .32rem;
-    color: #999999;
-    line-height: .26rem;
-}
 .day{
     font-size: .32rem;
     color: #333333
-}
-.price{
-    margin-left: .26rem;
-    margin-right: .26rem;
-    padding-right: .26rem;
-    border-right: .01rem solid #999999;
-    font-size: .32rem;
-    color: #999999;
-    line-height: .26rem;
 }
 .element{
     font-size: .28rem;
@@ -154,8 +135,7 @@ li{
     height: auto;
 }
 .introduce{
-    margin-left: .65rem;
-    margin-right: .26rem;
+    margin: 0 .26rem 0 .65rem;
     padding-right: .26rem;
     flex-shrink: 0;
     border-right: .01rem solid #999999;
