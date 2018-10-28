@@ -90,9 +90,9 @@ li{
     border-bottom: .02rem solid #E1E5E7;
 }
 .star{
+    margin: 0 .09rem 0 .26rem;
     height: .24rem;
     width: .24rem;
-    margin-right: 0 .09rem 0 .26rem;
 }
 .live{
     font-size: .32rem;
