@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+}
+.box{
+    display: flex;
+    width: 31%;
+    padding: 31%;
+    margin: 1%;
+    background-color: orange;
+}
