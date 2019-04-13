@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    display:block; width:300px; margin:0 auto; border-radius: 10px; background:white;
 }
 header{
     position: fixed;

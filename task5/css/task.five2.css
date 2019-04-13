@@ -1,9 +1,11 @@
 html{
     font-size: 312.5%;
+    height: 100%;
 }
 body{
     margin: 0;
     font-size: initial;
+    height: 100%;
 }
 header{
     display: flex;
@@ -16,6 +18,10 @@ header{
     height: 1.28rem;
     background-color: #5FC0CD;
     z-index: 1;
+}
+main{
+    height: 100%;
+    overflow-y: scroll;
 }
 .arrow{
     position: absolute;
@@ -147,16 +153,16 @@ footer{
     display: flex;
     position: fixed;
     bottom: 0;
-    justify-content: center;
     right: 0;
     left: 0;
     height: 1.28rem;
     background-color: #FFFFFF;
 }
 .stay{
-    margin-right: 2%;
+    margin-right: 12px;
+    margin-left: 19px;
     height: .88rem;
-    width: 45%;
+    width: calc((100% - 50px)/2);
     font-size: .34rem;
     border: .02rem solid #5FC0CD;
     border-radius: .2rem;
@@ -166,7 +172,8 @@ footer{
 }
 .contact{
     height: .88rem;
-    width: 45%;
+    margin-right: 19px;
+    width: calc((100% - 50px)/2);
     font-size: .34rem;
     border-radius: .2rem;
     border: none;
