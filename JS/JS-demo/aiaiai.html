@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        text-indent: 5px;
+    }
+</style>
+<body>
+    <div>艾克大神</div>
+</body>
+</html>
+<script>
+    // function Aa(a,b){
+    //    var zuo = {
+    //       a : a,
+    //       b : b, 
+    //     }
+    //     return zuo;
+    //     // this.a = a;
+    //     // this.b = b;
+    //     // console.log(this)
+    //     // console.log(this.a)
+    //     // console.log(this.b)
+    // }
+    // var zuo = Aa(1,2);
+    // console.log(zuo)
+
+    // var a = new Object();
+    // a.name = "zuo";
+    // a.job = "qianduan";
+    // a.age = 25;
+    // a.fc = function(){
+    //     console.log(this.name)
+    // }
+    // console.log(a)
+    
+    // var a = {
+    //     name : "zuo",
+    //     job : "qianduan",
+    //     age : 25,
+    //     fc : function(){
+    //         console.log(this.name)
+    //         return this.name
+    //     }
+    // }
+    // console.log(a)
+    // console.log(a.fc())
+
+    // function Aa(name,age,job){
+    //     this.name = name;
+    //     this.age = age;
+    //     this.job = job;
+    //     this.naj = function(){
+    //         console.log(this.name)
+    //         return this.age
+    //     };
+    // }
+    // var aa = new Aa("zuo",25,"qianduan");
+    // var bb = new Aa("jie",18,"houduan");
+    // console.log(aa.naj)
+    // console.log(bb.naj)
+
+    function tt(){
+        console.log("999")
+    }
+    tt.prototype.set=function (){ 
+        return this;
+    }
+
+
+    console.log(new tt())
+</script>

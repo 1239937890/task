@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投票</title>
+    <link rel="stylesheet" type="text/css" href="../scss/vote.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        投票
+        <div>
+            <span></span>
+        </div>
+    </header>
+    <main>
+        <p class="main_top">发言讨论结束，大家请投票</p>
+        <p class="sign">点击得票数最多的人的头像</p>
+        <div class="container">
+            <div class="player" id="role1">
+                <p class="name">平民</p>
+                <p class="number">1号</p>
+                <i></i>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button>确定</button>
+    </footer>
+    <!-- <script>
+        //提取玩家数组
+        var playersArray = JSON.parse(sessionStorage.getItem("playersArray"));
+        console.log(playersArray);
+        //平民
+        var civilian = +sessionStorage.getItem("civilian");
+        //杀手
+        var killer = +sessionStorage.getItem("killer");
+        //天数
+        var days= +sessionStorage.getItem("days");
+        //提取死掉的玩家号码数组
+        if (sessionStorage.getItem("dieNumber")) {
+            var dieNumber = JSON.parse(sessionStorage.getItem("dieNumber"));
+        } else {
+            var dieNumber = [];
+        }
+        console.log(dieNumber);
+        //提取被投死的数组
+        if(sessionStorage.getItem("voteDead")){
+            var voteDead = JSON.parse(sessionStorage.getItem("voteDead"));
+        }else{
+            var voteDead = [];
+        }
+        //选择的玩家
+        var choosePlayer;
+        //克隆
+        for (let i = 0; i < playersArray.length - 1; i++) {
+            $(".player").eq(0).clone(true).appendTo(".container");
+        }
+        //修改玩家名字和号码
+        for (let i = 0; i < playersArray.length; i++) {
+            if (playersArray[i] == "杀手") {
+                $(".name").eq(i).text("杀手");
+            }
+            $(".number").eq(i).text(i + 1 + "号");
+            //点击显示小图标
+            $(".player").eq(i).on("click", function () {
+                for (let i = 0; i < playersArray.length; i++) {
+                    $("i").eq(i).css("display", "none");
+                }
+                $("i").eq(i).css("display", "inline-block");
+                choosePlayer = i;
+                console.log(choosePlayer)
+            })
+        }
+        //渲染死亡玩家的背景
+        for(let i = 0 ;i<dieNumber.length;i++){
+            $(".name").eq(dieNumber[i]-1).css("background-color","#83B09A");
+        }
+        //确认杀人按钮
+        $("button").on("click", function () {
+            if ($(".name").eq(choosePlayer).css("background-color") == "rgb(131, 176, 154)"){
+                alert("不能投死死亡的玩家");
+            } else if (choosePlayer == undefined) {
+                alert("请选择要投死的玩家");
+            } else if(playersArray[choosePlayer] == "平民"){
+                //存储存活平民的数量
+                civilian = civilian - 1;
+                sessionStorage.setItem("civilian", civilian);
+                //存储被杀死的平民信息
+                var temp = (choosePlayer + 1) + "号被投死,真实身份是平民";
+                voteDead.push(temp);
+                sessionStorage.setItem("voteDead", JSON.stringify(voteDead));
+                //存储被投死的平民号码
+                dieNumber.push(choosePlayer + 1);
+                sessionStorage.setItem("dieNumber", JSON.stringify(dieNumber));
+                if (killer >= civilian || killer == 0) {
+                        location.href = ("result.html");
+                    } else {
+                        //存储天数  
+                        days += 1;
+                        sessionStorage.setItem("days", days);
+                        location.href = ("version.html");
+                    }
+            }else if(playersArray[choosePlayer] == "杀手"){
+                //存储存活平民的数量
+                killer = killer - 1;
+                sessionStorage.setItem("killer", killer);
+                //存储被杀死的平民信息
+                var temp = (choosePlayer + 1) + "号被投死,真实身份是杀手";
+                voteDead.push(temp);
+                sessionStorage.setItem("voteDead", JSON.stringify(voteDead));
+                //存储被杀的平民号码
+                dieNumber.push(choosePlayer + 1);
+                sessionStorage.setItem("dieNumber", JSON.stringify(dieNumber));
+                if (killer >= civilian || killer == 0) {
+                        location.href = ("result.html");
+                    } else {
+                        //存储天数  
+                        days += 1;
+                        sessionStorage.setItem("days", days);
+                        location.href = ("version.html");
+                    }
+            }
+        })
+        //退出游戏按钮
+        $("div").eq(0).click(function () {
+            if (confirm("确定退出游戏么？")) {
+                sessionStorage.clear();
+                location.href = ("homepage.html");
+            }
+        })
+        
+    </script> -->
+    <script src="../js/vote.js"></script>
+</body>
+
+</html>

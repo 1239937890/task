@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [1,2,3,4,5]
+         function shuffle(a) {
+            // var length = a.length;
+            // console.log(length);
+            console.log(a.length);
+            var shuffled = Array(a.length);//为什么不可以直接传入a.length ？
+            // var shuffled = Array(length);
+            console.log(shuffled);
+            for (var index = 0, rand; index < a.length; index++){  // ar index = 0, rand; 等于var index = 0;var rand;
+                console.log(index)
+                rand = ~~(Math.random() * (index + 1)); //0-index的整数
+                console.log(rand)
+                shuffled[index] = shuffled[rand];//这一行会导致 存入数组的数 位置又会产生新的变动 即rand下标 赋值给 index下标的shuffled数组
+                shuffled[rand] = a[index];
+            }
+            return shuffled;
+        }
+        console.log(shuffle(a));
+        // 总结：自己动手试试
+
+    </script>
+</body>
+</html>

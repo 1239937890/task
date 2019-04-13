@@ -1,0 +1,33 @@
+//宽，高
+@mixin w-h($w,$h) {
+    width: $w;
+    height: $h;
+}
+//flex垂直水平居中
+@mixin flex($x,$y){
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+// 绝对定位水平居中
+@mixin absolute-level($m-l) {
+    position: absolute;
+    left: 50%;
+    margin-left: $m-l;
+}
+
+// 绝对定位垂直居中
+@mixin absolute-vertical($m-t) {
+    position: absolute;
+    top: 50%;
+    margin-top: $m-t;
+}
+
+// 绝对定位水平垂直居中
+@mixin absolute-center($m-l, $m-t) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: $m-l;
+    margin-top: $m-t;
+}

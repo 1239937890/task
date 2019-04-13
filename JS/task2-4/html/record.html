@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法官日记</title>
+    <link rel="stylesheet" type="text/css" href="../scss/journal.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <header style="justify-content: center;">
+        <h5>法官日记</h5>
+    </header>
+    <main>
+        <div class="player" id="role1">
+            <div class="game_box">
+                <p class="name">平民</p>
+                <p class="number">1号</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button>开始游戏</button>
+    </footer>
+    <!-- <script>
+        //提取玩家数组
+        var playersArray = JSON.parse(sessionStorage.getItem("playersArray"));
+        console.log(playersArray);
+        //提取死掉的玩家号码数组
+        if (sessionStorage.getItem("dieNumber")) {
+            var dieNumber = JSON.parse(sessionStorage.getItem("dieNumber"));
+        } else {
+            var dieNumber = [];
+        }
+        //克隆
+        for (let i = 0; i < playersArray.length - 1; i++) {
+            $(".player").eq(0).clone(true).appendTo("main");
+        }
+        //修改玩家名字和号码
+        for (let i = 0; i < playersArray.length; i++) {
+            if (playersArray[i] == "杀手") {
+                $(".name").eq(i).text("杀手");
+            }
+            $(".number").eq(i).text(i + 1 + "号");
+        }
+        // //渲染死亡玩家的背景
+        for (let i = 0; i < dieNumber.length; i++) {
+            $(".name").eq(dieNumber[i] - 1).css("background-color", "#83B09A");
+        }
+        //开始游戏按钮
+        $("button").on("click",function(){
+            location.href = ('version.html');
+        })
+    </script> -->
+    <script src="../js/record.js"></script>
+</body>
+
+</html>
