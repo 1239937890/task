@@ -1,0 +1,208 @@
+html{
+    font-size: 312.5%;
+}
+body{
+    margin: 0;
+    font-size: initial;
+}
+//  /*隐藏checked复选框*/
+//  #sidemenu{
+//     display: none;
+// }
+
+// #sidemenu:checked + aside {
+//     /*为被选中的sidemenu后的aside设置属性（紧邻）*/
+//     left: 0;
+//     /*点击按钮即选中checked后,侧边栏位置变为贴着左边,配合ease-out使用,有渐变滑出的效果*/
+// }
+
+// #sidemenu:checked ~ #wrap {
+//     /*为被选中的sidemenu后的wrap设置属性（非紧邻）*/
+//     padding-left: 220px;
+// }
+
+// aside {
+//     /*侧边栏,初始位置为-200px，即隐藏效果*/
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: -200px;
+//     width: 200px;
+//     background: black;
+//     transition: 0.2s ease-out;
+//     /*动画效果的执行方式是ease-out，即侧边栏滑动效果为渐变式，而不是生硬的突然变化*/
+// }
+
+// h2 {
+//     color: white;
+//     text-align: center;
+//     font-size: 2em;
+// }
+
+// /*控制侧边栏进出的按钮（外部包裹）*/
+// #wrap {
+//     margin-left: 20px;
+//     padding: 10px;
+//     transition: 0.2s ease-out;
+// }
+
+// /*控制侧边栏进出的按钮（内部文字样式）*/
+// label {
+//     /*控制侧边栏进出的按钮*/
+//     background: white;
+//     border-radius: 70px;
+//     color: orange;
+//     cursor: pointer;
+//     display: block;
+//     font-family: Courier New;
+//     font-size: 2em;
+//     width: 1.5em;
+//     height: 1.5em;
+//     line-height: 1.5em;
+//     text-align: center;
+//     display: inline-block;
+// }
+
+// label:hover {
+//     background: #000;
+// }
+
+// #sideul li {
+//     list-style: none;
+//     color: white;
+//     width: 100%;
+//     height: 1.8em;
+//     font-size: 1.5em;
+//     text-align: center;
+// }
+
+// a {
+//     text-decoration: none;
+// }
+
+// #sideul li:hover {
+//     color: orange;
+// }
+p{
+    margin: 0 !important;
+}
+ /* 变量 */
+ $direction: 0;
+ $background: blue;
+$color: red;
+$font-size: 21px;
+ /* 混合 */
+ @mixin w-h($w:300px,$h:300px) {
+    width: $w;
+     height: $h;
+}
+ @mixin flex($x:center,$y:center) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+ body{
+     margin: $direction;
+ }
+ *, ::after, ::before {
+    box-sizing: border-box;
+}
+.tt{
+    text-align: center;
+}
+ .row{
+     display: flex;
+     flex-wrap: wrap;
+     margin: 0 auto;
+     padding-right: 15px;
+    padding-left: 15px;
+ }
+ @media (min-width: 576px)
+ {  .row{
+    max-width: 540px;
+}
+ }
+ @media (min-width: 768px)
+ {   .row{
+    max-width: 720px;
+ }
+}
+@media (min-width: 992px)
+ {
+    .row{
+        max-width: 960px;
+}
+ }
+ @media (min-width: 1200px)
+{   .row {
+    max-width: 1140px;
+}
+}
+
+
+
+    
+@for $i from 1 through 12 {
+     .col-#{$i}{
+         flex: 0 0 100%/12*$i;
+         position: relative;
+         padding: 0 15px;         
+    } 
+}
+$list:(sm: 576px,md:768px,lg:992px,xl:1200px);
+ @each $m,$px in $list {
+     @media (min-width:$px) {
+        @for $i from 1 through 12 {
+            .col-#{$m}-#{$i}{
+              flex: 0 0 100%/12*$i;
+                 position: relative;
+               padding: 0 15px;
+            }
+        }
+      }
+ }
+//  /* for-through */
+//   @for $i from 1 through 12 {
+//    .col-#{$i}{width: 8.3333333333333333333333333%*$i;
+//    display: flex;
+//     align-items: center;
+//  }    
+//  }
+// /* each多重赋值 */
+// $list: (a,red,default),(b,red,pointer),(c,green,move),(d,white,wait),(e,yellow,help);
+// @each $i,$color,$cursor in $list {
+//     .#{$i}-icon{
+//         background: url(../img/#{$i}.png) no-repeat;
+//         width: 46px;
+//         height: 46px;
+//         border: 2px solid $color;
+//         cursor: $cursor;
+//     }
+// }
+// /* while */
+// $types: 4; 
+// $type-width: 20px; 
+// @while $types > 0 {
+//      .while-#{$types} { 
+//          width: $type-width + $types;
+//         } 
+//         $types: $types - 1;
+//     }
+
+
+/*  header{
+    position: fixed;
+     left: $direction;
+     right: $direction;
+     top: 20px;
+     height: 100px;
+     border: 5px solid green;
+    display: flex;
+    align-items: center;
+     background: orange;
+    color: $color;
+   font-size: $font-size;
+} */
+
+ 
+ 

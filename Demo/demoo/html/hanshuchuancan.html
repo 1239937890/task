@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function setName(obj) {
+            obj.name = 'a';
+            obj = new Object;
+            obj.name = 'b';
+        }
+        var person = new Object;
+        setName(person);
+        console.log(person.name)  // a
+
+        var a = {
+            num: '1'
+        };
+        var b = {
+            num: '2'
+        };
+        function change(obj) {
+            obj.num = '3';
+            obj = b;
+            return obj.num;
+        }
+        var result = change(a);
+        console.log(result + ' | ' + a.num); // 2/3
+
+var rotate = function(nums, k) {
+   var len = nums.length;  // 就是外面a数组的长度 7
+   var newArr = nums.splice(0, len-k) // 从0开始删除4个元素 nums和a都是指向=>[1,2,3,4,5,6,7] 在这里修改成了 [5,6,7]  这个就是a的值
+   console.log(newArr)
+   console.log(nums)
+   nums.splice(3,0,newArr)
+//    var temp = nums.concat(newArr) // 合并数组[5,6,7]和[1234]形成一个新的对象数组 
+//    nums = temp // 这里的赋值会改变nums的指针，但不会改变外面数组a的指针  
+//    return nums;  // [5671234]
+};
+var a = [1,2,3,4,5,6,7]; // 创建一个数组
+console.log(rotate(a, 3));  //  数组作为实参传入函数
+console.log(a);// [567]
+    </script>
+</body>
+</html>

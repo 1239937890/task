@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- <div id="app">
+        <input type="text" v-model="value">
+        <input type="button" value="发送">
+        <div>value 的值是：{{ value }}</div>
+      </div> -->
+</body>
+<!-- <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: function () {
+            return {value: ''}
+        }
+    })
+</script> -->
+<script>
+//     const p1 = new Promise(function(resolve,reject){
+//         resolve('success2');
+//         resolve('success1');
+ 
+// });
+ 
+// const p2 = new Promise(function(resolve,fulfill){
+//     resolve('success3');
+//     fulfill('111');
+ 
+// });
+ 
+// p1.then(function(value){
+//   console.log(value); // success1
+// });
+// p2.then(function(value){
+//   console.log(value); // success3
+// });
+
+// const p = new Promise(function(resolve,reject){
+//   resolve('success');
+// });
+ 
+// p.then(function(value){
+//   console.log(value);
+// });
+ 
+// console.log('first');
+
+var myFirstPromise = new Promise(function(resolve, reject){
+    //当异步代码执行成功时，我们才会调用resolve(...), 当异步代码失败时就会调用reject(...)
+    //在本例中，我们使用setTimeout(...)来模拟异步代码，实际编码时可能是XHR请求或是HTML5的一些API方法.
+    setTimeout(function(){
+        resolve("成功!"); //代码正常执行！
+    }, 250);
+});
+ 
+myFirstPromise.then(function(successMessage){
+    //successMessage的值是上面调用resolve(...)方法传入的值.
+    //successMessage参数不一定非要是字符串类型，这里只是举个例子
+    document.write("Yay! " + successMessage);
+});
+</script>
+</html>

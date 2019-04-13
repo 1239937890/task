@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin-left: 10%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: test1 8s ease infinite;
+          animation: test1 8s ease infinite;
+}
+
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 200px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.box1 {
+  background: #2b669a;
+  -webkit-transform: rotateY(90deg) translateZ(-100px);
+          transform: rotateY(90deg) translateZ(-100px);
+}
+
+.box2 {
+  background: #509a64;
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+}
+
+.box3 {
+  background: #9a5468;
+  -webkit-transform: rotateX(90deg) translateZ(-100px);
+          transform: rotateX(90deg) translateZ(-100px);
+}
+
+.box4 {
+  background: #979a25;
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px);
+}
+
+.box5 {
+  background: #97709a;
+  -webkit-transform: translateZ(-100px);
+          transform: translateZ(-100px);
+}
+
+.box6 {
+  background: #589a25;
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+@-webkit-keyframes test1 {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes test1 {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+/*# sourceMappingURL=dhh.css.map */

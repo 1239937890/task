@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+}
+.box{
+    width: 100px;
+    height:100px;
+    margin:40px auto;
+    /*设置井深、透视*/
+    perspective: 500px;
+    /*perspective-origin: top;*/
+    transform: rotate3d(0,0,145deg);
+    perspective-origin: -90% -150%;
+}
+.cube{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: wrap 3s 5s infinite forwards;
+}
+//  @keyframes wrap{
+//      to{
+//          transform:translate3d(0,0,100px);
+//      }
+// }
+%item{
+    width:100px;
+    height: 100px;
+    font-size:80px;
+    text-align:center;
+    line-height: 100px;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform-style: preserve-3d;
+}
+.item-a{
+    @extend %item;
+    background: rgba(255, 59, 7, 0.5);
+}
+.item-b{
+    @extend %item;
+    background:rgba(255,255,0,0.5);
+}
+.item-c{
+    @extend %item;
+    background:rgba(41, 189, 224, 0.5);
+}
+.item-d{
+    @extend %item;
+    background:rgba(81, 81, 81, 0.5);
+}
+.item-e{
+    @extend %item;
+    background:rgba(38, 162, 111, 0.5);
+}
+.item-f{
+    @extend %item;
+    background: rgba(180, 220, 150, 0.5);
+}
+.item1{
+    z-index: 5;
+    animation: item1 1s forwards;
+}
+@keyframes item1{
+    to{
+        transform-origin: top;
+        transform: rotateX(90deg);
+    }
+}
+.item2{
+    z-index: 4;
+    animation: item2 1s 1s forwards;
+}
+@keyframes item2{
+    to{
+        transform-origin: left;
+        transform: rotateY(-90deg);
+    }
+}
+.item3{
+    z-index: 3;
+    animation: item3 1s 2s forwards;
+}
+@keyframes item3{
+    to{
+        transform-origin: right;
+        transform: rotateY(90deg);
+    }
+}
+.item4{
+    z-index: 2;
+    animation: item4 1s 3s forwards;
+}
+@keyframes item4{
+    to{
+        transform-origin:  bottom;
+        transform: rotateX(-90deg);
+    }
+}
+.item5{
+    z-index: 1;
+    animation: item5 1s 4s forwards;
+}
+@keyframes item5{
+    to{
+        transform: translate3d(0,0,100px);
+    }
+}
+.item6{
+    z-index: 0;
+}
